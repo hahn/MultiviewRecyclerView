@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/img_item_rv"
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/txt_item_img_title"
+        android:textSize="@dimen/text_title_list"
+        android:textStyle="bold"
+        android:text="@string/tmp_title"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp" />
+    <TextView
+        android:id="@+id/txt_item_img_teaser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:textSize="@dimen/text_cat_date_list"
+        android:text="@string/tmp_teaser"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        />
+    <TextView
+        android:id="@+id/txt_item_img_catdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_cat_date_list"
+        android:paddingTop="4dp"
+        android:text="@string/tmp_date"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        />
+    <View
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        />
+
+</LinearLayout>
