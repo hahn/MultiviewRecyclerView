@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import id.web.hn.multiviewrecyclerview.R;
+import id.web.hn.multiviewrecyclerview.app.fragment.FragmentInilah;
 import id.web.hn.multiviewrecyclerview.app.fragment.FragmentMain;
 
 public class MainActivity extends AppCompatActivity
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Template");
+        getSupportActionBar().setTitle("InilahKoran");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,8 +41,17 @@ public class MainActivity extends AppCompatActivity
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 
+//        //fragment isi dummy
+//        FragmentMain mFragmentMain = new FragmentMain();
+//        FragmentTransaction mFragmentTransaction =
+//                getSupportFragmentManager().beginTransaction();
+//        mFragmentTransaction.replace(R.id.fragment_container, mFragmentMain);
+//        mFragmentTransaction.commit();
+
+        Bundle args = new Bundle();
+        args.putString("url", "ht");
         //fragment isi
-        FragmentMain mFragmentMain = new FragmentMain();
+        FragmentInilah mFragmentMain = new FragmentInilah();
         FragmentTransaction mFragmentTransaction =
                 getSupportFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.fragment_container, mFragmentMain);
@@ -49,8 +59,11 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        //TODO: di sini ganti fragment per kategori
         return false;
     }
 
@@ -60,12 +73,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.action_settings){
-            Snackbar.make(toolbar, "sample Multivew RecyclerView", Snackbar.LENGTH_LONG).show();
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+////        int id = item.getItemId();
+////        if(id == R.id.action_refresh){
+//////            Snackbar.make(toolbar, "sample Multivew RecyclerView", Snackbar.LENGTH_LONG).show();
+////        }
+//        return true;
+//    }
 }

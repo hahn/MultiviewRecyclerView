@@ -9,12 +9,19 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
-
     <item
-        android:id="@+id/action_search"
-        android:icon="@android:drawable/ic_menu_search"
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
         android:orderInCategory="1"
-        android:title="Search"
-        app:showAsAction="ifRoom" />
+        android:title="refresh"
+        app:showAsAction="ifRoom"
+        />
+
+    <!--<item-->
+        <!--android:id="@+id/action_search"-->
+        <!--android:icon="@android:drawable/ic_menu_search"-->
+        <!--android:orderInCategory="2"-->
+        <!--android:title="Search"-->
+        <!--app:showAsAction="ifRoom" />-->
 
 </menu>

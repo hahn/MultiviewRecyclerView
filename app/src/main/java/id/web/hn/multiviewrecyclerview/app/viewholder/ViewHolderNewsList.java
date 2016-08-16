@@ -71,6 +71,9 @@ public class ViewHolderNewsList extends RecyclerView.ViewHolder
 
     @Override
     public void onClick(View v) {
+        if(onItemClickListener != null){
+            onItemClickListener.onItemClick(null, v, pos, 0);
+        }
 
     }
 }
